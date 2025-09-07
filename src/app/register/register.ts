@@ -29,4 +29,9 @@ export class Register{
       form.reset();
     }
   }
+
+  onRegister(){
+
+    alert('Registration Sucessful ')
+  }
 }

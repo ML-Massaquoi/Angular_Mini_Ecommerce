@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  onSendMessage(){
+    alert('Message sent. Thank you for contacting us we will respond ASAP')
+  }
+
 }
