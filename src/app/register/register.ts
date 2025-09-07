@@ -17,6 +17,7 @@ export class Register{
     confirmPassword: ''
   };
 
+  
   onSubmit(form: any) {
     if (form.valid) {
       if (this.newUser.password !== this.newUser.confirmPassword) {
