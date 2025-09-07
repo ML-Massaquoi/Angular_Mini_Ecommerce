@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d6efd;
+  transition: width 0.3s;
+  margin: auto;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
