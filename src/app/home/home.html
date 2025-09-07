@@ -1,14 +1,26 @@
-<h2 class="mt-4">Featured Products</h2>
+<!-- Hero Section -->
+<section class="hero-section bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Hero Text -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="display-4 fw-bold text-primary">
+          Welcome to <span class="text-dark">ShopMate</span>
+        </h1>
+        <p class="lead text-muted mt-3">
+          Your one-stop destination for trendy fashion, electronics, and everyday essentials at unbeatable prices.
+        </p>
+        <div class="mt-4 d-flex gap-3">
+          <a [routerLink]="['/shop']" class="btn btn-primary btn-lg rounded-pill px-4">🛍️ Shop Now</a>
+          <a [routerLink]="['/contacts']" class="btn btn-outline-primary btn-lg rounded-pill px-4">📞 Contact Us</a>
+        </div>
+      </div>
 
-<div class="products">
-  <div *ngFor="let product of featuredProducts" class="product-card">
-    <img [src]="product.productImageUrl" alt="{{product.productName}}">
-    <h3>{{ product.productName }}</h3>
-    <p class="text-muted">{{ product.productCategory }}</p>
-    <p class="fw-bold">${{ product.productPrice }}</p>
+      <!-- Hero Image -->
+      <div class="col-lg-6 text-center">
+        <img src="hero.png" alt="Shopping Banner"
+             class="img-fluid rounded-3 shadow">
+      </div>
+    </div>
   </div>
-</div>
-
-<a class ="center" routerLink="/shop" class="btn btn-primary mt-3">View All Products →</a>
-
-
+</section>

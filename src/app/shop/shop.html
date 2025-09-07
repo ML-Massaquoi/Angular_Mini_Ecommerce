@@ -1,5 +1,10 @@
 <h2 class="mt-4">All Products</h2>
 
+<!-- Implementing Data Binding (Two Way) for the Search results -->
+<div class="mb-3">
+  <input class="form-control rounded-pill px-3" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchResults">
+  <p><strong>Search Results:</strong> {{ searchResults }}</p>
+</div> 
 <div class="row">
   <div *ngFor="let product of products" class="col-md-3 mb-3">
     <div class="card h-100">
@@ -10,6 +15,7 @@
         <p class="fw-bold" [ngStyle]="{'color': product.productQuantity === 0 ? 'red' : 'green'}">
           {{ product.productQuantity === 0 ? 'Out of Stock' : 'In Stock' }}
         </p>
+       
         <button class="btn btn-primary mt-auto" [disabled]="product.productQuantity === 0">
           <!-- When user click the buy now button it will alert to login -->
           <a [routerLink]="['/login']" class="text-white text-decoration-none" (click)="onBuyNow()"> Buy Now</a>

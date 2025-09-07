@@ -92,7 +92,11 @@
   },
   "cli": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "763fd895-ee8b-4c61-8078-ac7c11104852"
+>>>>>>> 3f1bebdf29d8a25721b0c2a68b26b0f43674ac78
 =======
     "analytics": "ff9f71b1-d2cf-4c80-9aea-6652b077c584"
 >>>>>>> 4ac4fea6db16edb660a768739b9082833f45bbf0
