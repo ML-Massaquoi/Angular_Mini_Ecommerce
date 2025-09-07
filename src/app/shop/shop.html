@@ -8,7 +8,8 @@
       <img [src]="product.productImageUrl" class="card-img-top" alt="{{ product.productName }}">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">{{ product.productName }}</h5>
-        <p class="card-text">{{ "NLE" + product.productPrice }}</p>
+         <p class="card-text"><strong>{{ product.productCategory }}</strong></p>
+        <p class="card-text"><strong>{{ "NLE" + product.productPrice }}</strong></p>
         <p class="fw-bold" [ngStyle]="{'color': product.productQuantity === 0 ? 'red' : 'green'}">
           {{ product.productQuantity === 0 ? 'Out of Stock' : 'In Stock' }}
         </p>
