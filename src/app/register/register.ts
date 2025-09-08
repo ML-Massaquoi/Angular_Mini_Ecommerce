@@ -33,6 +33,5 @@ export class Register{
 
   onRegister(){
 
-    alert('Registration Sucessful ')
   }
 }
