@@ -17,8 +17,8 @@
         </p>
        
         <button class="btn btn-primary mt-auto" [disabled]="product.productQuantity === 0">
-          <!-- When user click the buy now button it will alert to login -->
-          <a [routerLink]="['/login']" class="text-white text-decoration-none" (click)="onBuyNow()"> Buy Now</a>
+          <!-- Event Binding with buy now button -->
+          <a [routerLink]="['/login']" class="text-white text-decoration-none" (click) ="onBuyNow()"> Buy Now</a>
         </button>
       </div>
       </div>

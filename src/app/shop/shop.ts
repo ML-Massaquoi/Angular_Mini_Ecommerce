@@ -21,10 +21,12 @@ export class ShopComponent {
     this.products = this.productService.getAllProducts();
   }
 
-  // buynow function to alert users to login
+  // Buy Now function for event binding
 
   onBuyNow(){
+
     alert("Please login to proceed with the purchase.");
+    
   }
 
  
