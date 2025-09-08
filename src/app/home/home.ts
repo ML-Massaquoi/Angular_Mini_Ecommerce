@@ -12,10 +12,13 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   featuredProducts: any[] = [];
+  heroImageUrl: string = 'hero.png';
 
   constructor(private productService: ProductList) {}
 
   ngOnInit() {
     this.featuredProducts = this.productService.getFeaturedProducts();
+
+    
   }
 }
