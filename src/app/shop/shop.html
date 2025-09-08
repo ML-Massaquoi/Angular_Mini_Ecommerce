@@ -13,7 +13,7 @@
         <h5 class="card-title">{{ product.productName }}</h5>
 
         <!-- Pipes Implementations -->
-        <p class="card-text">{{product.productPrice | currency: 'NLE: '}}</p>
+        <p class="card-text">{{product.productPrice | currency: 'NLE': 'symbol'}}</p>
         <p class="fw-bold" [ngStyle]="{'color': product.productQuantity === 0 ? 'red' : 'green'}">
           {{ product.productQuantity === 0 ? 'Out of Stock' : 'In Stock' }}
         </p>
