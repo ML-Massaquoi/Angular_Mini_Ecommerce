@@ -17,8 +17,7 @@ export class LoginComponent {
 
   onSubmit(form: any) {
     if (form.valid) {
-      console.log('Login Submitted!', this.user);
-      alert(`Welcome back, ${this.user.email}!`);
+    
       form.reset();
     }
   }

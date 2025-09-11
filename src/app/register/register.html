@@ -1,20 +1,7 @@
  <!-- Author: Freaky Daddy-->
 <div class="container mt-5">
-  <h2 class="mb-4">Register</h2>
+  <h2 class="mb-4">{{isloggedin ? 'Login':'Register'}}</h2>
   <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
-
-    <!-- Full Name -->
-    <div class="mb-3">
-      <label for="fullName" class="form-label">Full Name</label>
-      <input
-        type="text"
-        id="fullName"
-        name="fullName"
-        class="form-control"
-        required
-        [(ngModel)]="newUser.fullName"
-      />
-    </div>
 
     <!-- Email -->
     <div class="mb-3">
@@ -41,20 +28,8 @@
         [(ngModel)]="newUser.password"
       />
     </div>
+    <button type="submit" class="btn btn-success" (click)="onRegister(registerForm)">{{isloggedin ? 'Login':'Register'}}</button>
 
-    <!-- Confirm Password -->
-    <div class="mb-3">
-      <label for="confirmPassword" class="form-label">Confirm Password</label>
-      <input
-        type="password"
-        id="confirmPassword"
-        name="confirmPassword"
-        class="form-control"
-        required
-        [(ngModel)]="newUser.confirmPassword"
-      />
-    </div>
-
-    <button type="submit" class="btn btn-primary" (click)="onRegister()">Register</button>
+    <p> {{isloggedin ? 'Do not have an account  ' : 'Already have an account  '}}<b  class="btn btn-primary" (click)="onswitch()">{{isloggedin ? 'Register' : 'Login '}}</b></p>
   </form>
 </div>

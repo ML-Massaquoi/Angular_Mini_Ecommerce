@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Required for template-driven forms
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms'; // Required for template-driven forms
 import { RouterModule } from '@angular/router';
+import { Authservices } from '../services/authservices';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,6 +12,10 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./register.css']
 })
 export class Register{
+
+  isloggedin = true;
+
+  authservices: Authservices= inject(Authservices);
   newUser = {
     fullName: '',
     email: '',
@@ -25,13 +31,26 @@ export class Register{
         return;
       }
 
-      console.log('Registration Submitted!', this.newUser);
-      alert(`Welcome aboard, ${this.newUser.fullName}! Your account has been created.`);
       form.reset();
     }
   }
 
-  onRegister(){
+  onRegister(form: NgForm){
 
+
+    const email = form.value.email;
+    const password = form.value.password;
+    this.authservices.register(email, password);
+    console.log(form.value);
+
+    form.reset();
+    
+
+
+  }
+
+  onswitch(){
+
+    this.isloggedin != this.isloggedin
   }
 }
