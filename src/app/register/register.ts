@@ -51,6 +51,7 @@ export class Register{
 
   onswitch(){
 
-    this.isloggedin != this.isloggedin
+    this.isloggedin = !this.isloggedin
   }
+
 }

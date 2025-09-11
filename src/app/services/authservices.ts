@@ -28,4 +28,16 @@ export class Authservices {
     });
   }
   
+
+  login(email:any, password: any){
+    const data = {email: email, password: password, returnSecureToken:true};
+    this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCQbvTGc8_AZgtdbgB4RLgvkW3SxvAIWec',data).subscribe({
+      next: (res) => {
+        console.log('Login successful', res);
+      },
+      error: (err) => {
+        console.error('Login failed', err);
+      }
+    });
+  }
 }
